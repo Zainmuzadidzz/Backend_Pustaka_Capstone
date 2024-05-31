@@ -80,3 +80,50 @@ Content-Type: application/json
 ###
 // delete kategori
 DELETE  http://localhost:5000/kategori/458b1d00-0100-42c2-9850-d0acca5dfec0
+
+
+###
+//create book
+POST http://localhost:5000/book
+Content-Type: application/json
+
+{
+    "judul": "Buku asdas",
+    "penulis": "Penulis 3",
+    "penerbit": "Penerbit 3",
+    "cover": "Cover 3",
+    "sinopsis": "Sinopsis 3",
+    "tahun_terbit": 3003,
+    "qty": 3,
+    "kategoriId": 3
+
+}
+
+###
+// get All books
+GET http://localhost:5000/books
+
+###
+// get Single books
+GET http://localhost:5000/book/b629b56c-b971-47c9-ad1e-3f43087eb708
+
+###
+//create book
+PATCH  http://localhost:5000/book/704889dc-6300-4ad4-9a36-ec23dcc909a4
+Content-Type: application/json
+
+{
+    "judul": "Buku 3",
+    "penulis": "Penulis 3",
+    "penerbit": "Penerbit 3",
+    "cover": "Cover 3",
+    "sinopsis": "Sinopsis 3",
+    "tahun_terbit": 3003,
+    "qty": 3,
+    "kategoriId": 3
+
+}
+
+###
+// Delete book
+DELETE http://localhost:5000/book/b629b56c-b971-47c9-ad1e-3f43087eb708

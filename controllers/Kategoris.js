@@ -63,7 +63,7 @@ export const deleteKategori = async (req, res) => {
             uuid: req.params.id
         }
     });
-  
+  if(!kategori) return res.status(404).json({msg: "No Data Found"});
     try {
      await Kategori.destroy({
          where: {
