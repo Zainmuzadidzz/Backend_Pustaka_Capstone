@@ -52,57 +52,78 @@ Content-Type: application/json
         
 }
 ###
-// Login User role user
-POST http://localhost:5000/login
+// Created kategori
+POST http://localhost:5000/kategori
 Content-Type: application/json
 
 {
-    
-    "email": "prabowo@gmail.com",
-    "password": "123456"
-        
+    "name": "sss"  
 }
 
 ###
-// Get User Login
-GET http://localhost:5000/me
+// get All kategori
+GET http://localhost:5000/kategoris
 
 ###
-// user logout
-DELETE http://localhost:5000/logout
+// get Single kategori
+GET http://localhost:5000/kategori/17d142f6-22f3-4d29-b178-94e532c59e5f
 
 
 ###
-// Get All Products
-GET http://localhost:5000/products
-
-###
-// Get single Products
-GET http://localhost:5000/products/e0d7b09f-0971-4e66-a8ce-e3e30a602584
-
-###
-// post data product
-POST http://localhost:5000/products
+// Update kategori
+PATCH http://localhost:5000/kategori/24369422-6edb-4869-a63f-4a37dd4d72a7
 Content-Type: application/json
 
 {
-    "name": "Product 4",
-    "price": 111
-
+    "name": "Sejarah Indonesia"  
 }
+###
+// delete kategori
+DELETE  http://localhost:5000/kategori/458b1d00-0100-42c2-9850-d0acca5dfec0
 
 
 ###
-// Update data product
-patch http://localhost:5000/products/ddee1901-0934-4b46-a300-a22efbcb1fc7
+//create book
+POST http://localhost:5000/book
 Content-Type: application/json
 
 {
-    "name": "Product Updated",
-    "price": 1010
+    "judul": "Buku asdas",
+    "penulis": "Penulis 3",
+    "penerbit": "Penerbit 3",
+    "cover": "Cover 3",
+    "sinopsis": "Sinopsis 3",
+    "tahun_terbit": 3003,
+    "qty": 3,
+    "kategoriId": 3
 
 }
 
 ###
-// Delete Product
-DELETE http://localhost:5000/products/a9a857b8-7260-4318-a647-aceef8c97fb1
+// get All books
+GET http://localhost:5000/books
+
+###
+// get Single books
+GET http://localhost:5000/book/b629b56c-b971-47c9-ad1e-3f43087eb708
+
+###
+//create book
+PATCH  http://localhost:5000/book/704889dc-6300-4ad4-9a36-ec23dcc909a4
+Content-Type: application/json
+
+{
+    "judul": "Buku 3",
+    "penulis": "Penulis 3",
+    "penerbit": "Penerbit 3",
+    "cover": "Cover 3",
+    "sinopsis": "Sinopsis 3",
+    "tahun_terbit": 3003,
+    "qty": 3,
+    "kategoriId": 3
+
+}
+
+###
+// Delete book
+DELETE http://localhost:5000/book/b629b56c-b971-47c9-ad1e-3f43087eb708
