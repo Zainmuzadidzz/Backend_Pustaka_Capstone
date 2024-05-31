@@ -1,0 +1,108 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "user1",
+    "email": "user@gmail.com",
+    "password": "123456",
+    "jenisKelamin": "Perempuan",
+    "noTlp": "08123998712",
+    "alamat": "Jl jampra lorongs 2 no 12a",    
+    "role": "user"
+}
+###
+// get All user
+GET http://localhost:5000/users
+
+###
+// get Singel user
+GET http://localhost:5000/users/9e79a8c9-2358-4c3f-9309-756ac198c5f7
+
+###
+// update user
+PATCH  http://localhost:5000/users/9e79a8c9-2358-4c3f-9309-756ac198c5f7
+Content-Type: application/json
+
+{
+    "name": "user Updated",
+    "email": "user@gmail.com",
+    "password": "",
+     "confPassword": "",
+    "jenisKelamin": "Perempuan",
+    "noTlp": "08123998712",
+    "alamat": "Jl jampra lorongs 2 no 12a",    
+    "role": "user"
+}
+
+
+###
+// delete a user
+DELETE   http://localhost:5000/users/47ec9665-c53d-4367-ba17-fa6bb1f5b909
+
+###
+// Login User role admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+    "email": "admin@gmail.com",
+    "password": "123456"
+        
+}
+###
+// Login User role user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    
+    "email": "prabowo@gmail.com",
+    "password": "123456"
+        
+}
+
+###
+// Get User Login
+GET http://localhost:5000/me
+
+###
+// user logout
+DELETE http://localhost:5000/logout
+
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get single Products
+GET http://localhost:5000/products/e0d7b09f-0971-4e66-a8ce-e3e30a602584
+
+###
+// post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 4",
+    "price": 111
+
+}
+
+
+###
+// Update data product
+patch http://localhost:5000/products/ddee1901-0934-4b46-a300-a22efbcb1fc7
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 1010
+
+}
+
+###
+// Delete Product
+DELETE http://localhost:5000/products/a9a857b8-7260-4318-a647-aceef8c97fb1
