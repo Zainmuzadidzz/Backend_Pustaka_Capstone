@@ -3,8 +3,8 @@ import {getBooks, getBookById, createBook, updateBook, deleteBook} from "../cont
 import { verifyUser, adminOnly } from "../middleware/AuthUser.js";
 const router = express.Router();
 
-router.get('/books', verifyUser, adminOnly, getBooks);
-router.get('/book/:id', verifyUser, adminOnly, getBookById);
+router.get('/books', verifyUser, getBooks);
+router.get('/book/:id', verifyUser, getBookById);
 router.post('/book', verifyUser, adminOnly, createBook);
 router.patch('/book/:id', verifyUser, adminOnly, updateBook);
 router.delete('/book/:id', verifyUser, adminOnly, deleteBook);
