@@ -13,15 +13,7 @@ const Peminjaman = db.define('peminjaman',{
         validate:{
             notEmpty: true
         }
-    },
-    judul:{
-        type: DataTypes.STRING,        
-        allowNull: false,
-        validate:{
-            notEmpty: true,
-            len: [3, 100]
-        }
-    },
+    },  
     tanggal_pinjam:{
         type: DataTypes.DATE,        
         allowNull: false,
