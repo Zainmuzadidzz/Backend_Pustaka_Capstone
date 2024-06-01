@@ -19,11 +19,11 @@ const store = new sessionStore({
 });
 
 // aktifkan saat pertama kali di jalankan
-// (async()=>{
-//     await db.sync();
-// })();
+(async()=>{
+    await db.sync();
+})();
 
-// store.sync();
+store.sync();
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -45,5 +45,5 @@ app.use(PeminjamanRoute);
 app.use(AuthRoute);
 
 app.listen(process.env.APP_PORT, () => {
-    console.log('Server up and running', process.env.APP_PORT)
+    console.log('Server up and running')
 });

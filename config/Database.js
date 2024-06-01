@@ -1,7 +1,9 @@
 import { Sequelize } from "sequelize";
+import dotenv from "dotenv";
+dotenv.config();
 
-const db = new Sequelize('bttwdkly9i244be4opes', 'u4ztzs00qpugtrrd', 'gxCoDPzb1hduM5TQvq5Q', {
-    host: 'bttwdkly9i244be4opes-mysql.services.clever-cloud.com',
+const db = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
     dialect: 'mysql'
 });
 
