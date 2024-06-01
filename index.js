@@ -44,6 +44,6 @@ app.use(BookRoute);
 app.use(PeminjamanRoute);
 app.use(AuthRoute);
 
-app.listen(process.env.APP_PORT, () => {
-    console.log('Server up and running')
+app.listen(3000 || process.env.APP_PORT, () => {
+    console.log('Server up and running',process.env.APP_PORT)
 });
