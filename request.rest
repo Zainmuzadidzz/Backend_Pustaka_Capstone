@@ -167,7 +167,7 @@ GET http://localhost:5000/peminjamans
 
 ###
 // Get Single Peminjaman
-GET http://localhost:5000/peminjaman/1fedf335-3c6a-472b-9661-09457d024056
+GET http://localhost:5000/peminjaman/7978f8c4-f38c-4aca-abc2-12515eba9bf0
 
 ###
 // Update Peminjaman

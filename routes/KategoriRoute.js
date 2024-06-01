@@ -1,11 +1,12 @@
 import express from "express";
 import {getKategoris, getKategoriById, createKategori, updateKategori, deleteKategori} from "../controllers/Kategoris.js";
+import { verifyUser, adminOnly } from "../middleware/AuthUser.js";
 const router = express.Router();
 
-router.get('/kategoris', getKategoris);
-router.get('/kategori/:id', getKategoriById);
-router.post('/kategori', createKategori);
-router.patch('/kategori/:id', updateKategori);
-router.delete('/kategori/:id', deleteKategori);
+router.get('/kategoris', verifyUser, adminOnly, getKategoris);
+router.get('/kategori/:id', verifyUser, adminOnly, getKategoriById);
+router.post('/kategori', verifyUser, adminOnly, createKategori);
+router.patch('/kategori/:id', verifyUser, adminOnly, updateKategori);
+router.delete('/kategori/:id', verifyUser, adminOnly, deleteKategori);
 
 export default router;
