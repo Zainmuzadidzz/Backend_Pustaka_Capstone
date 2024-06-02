@@ -19,11 +19,11 @@ const store = new sessionStore({
 });
 
 // aktifkan saat pertama kali di jalankan
-// (async()=>{
-//     await db.sync();
-// })();
+(async()=>{
+    await db.sync();
+})();
 
-// store.sync();
+store.sync();
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -35,7 +35,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173'
+    origin: '*'
 }));
 app.use(express.json());
 app.use(UserRoute);
@@ -44,6 +44,7 @@ app.use(BookRoute);
 app.use(PeminjamanRoute);
 app.use(AuthRoute);
 
-app.listen(process.env.APP_PORT, () => {
-    console.log('Server up and running', process.env.APP_PORT)
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log('Server up and running',port)
 });
