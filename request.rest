@@ -1,5 +1,5 @@
 // Create a user
-POST http://localhost:5000/users
+POST https://backendpustakacapstone-production.up.railway.app/users
 Content-Type: application/json
 
 {
@@ -13,15 +13,15 @@ Content-Type: application/json
 }
 ###
 // get All user
-GET http://localhost:5000/users
+GET https://backendpustakacapstone-production.up.railway.app/users
 
 ###
 // get Singel user
-GET http://localhost:5000/users/9e79a8c9-2358-4c3f-9309-756ac198c5f7
+GET https://backendpustakacapstone-production.up.railway.app/users/9e79a8c9-2358-4c3f-9309-756ac198c5f7
 
 ###
 // update user
-PATCH  http://localhost:5000/users/9e79a8c9-2358-4c3f-9309-756ac198c5f7
+PATCH  https://backendpustakacapstone-production.up.railway.app/users/9e79a8c9-2358-4c3f-9309-756ac198c5f7
 Content-Type: application/json
 
 {
@@ -38,11 +38,11 @@ Content-Type: application/json
 
 ###
 // delete a user
-DELETE   http://localhost:5000/users/47ec9665-c53d-4367-ba17-fa6bb1f5b909
+DELETE   https://backendpustakacapstone-production.up.railway.app/users/47ec9665-c53d-4367-ba17-fa6bb1f5b909
 
 ###
 // Login User role admin
-POST http://localhost:5000/login
+POST https://backendpustakacapstone-production.up.railway.app/login
 Content-Type: application/json
 
 {
@@ -54,7 +54,7 @@ Content-Type: application/json
 
 ###
 // Login User role user
-POST http://localhost:5000/login
+POST https://backendpustakacapstone-production.up.railway.app/login
 Content-Type: application/json
 
 {
@@ -65,15 +65,15 @@ Content-Type: application/json
 }
 ###
 // get Me
-GET http://localhost:5000/me
+GET https://backendpustakacapstone-production.up.railway.app/me
 
 ###
 // Logout
-Delete http://localhost:5000/logout
+Delete https://backendpustakacapstone-production.up.railway.app/logout
 
 ###
 // Created kategori
-POST http://localhost:5000/kategori
+POST https://backendpustakacapstone-production.up.railway.app/kategori
 Content-Type: application/json
 
 {
@@ -82,16 +82,16 @@ Content-Type: application/json
 
 ###
 // get All kategori
-GET http://localhost:5000/kategoris
+GET https://backendpustakacapstone-production.up.railway.app/kategoris
 
 ###
 // get Single kategori
-GET http://localhost:5000/kategori/17d142f6-22f3-4d29-b178-94e532c59e5f
+GET https://backendpustakacapstone-production.up.railway.app/kategori/17d142f6-22f3-4d29-b178-94e532c59e5f
 
 
 ###
 // Update kategori
-PATCH http://localhost:5000/kategori/24369422-6edb-4869-a63f-4a37dd4d72a7
+PATCH https://backendpustakacapstone-production.up.railway.app/kategori/24369422-6edb-4869-a63f-4a37dd4d72a7
 Content-Type: application/json
 
 {
@@ -99,12 +99,12 @@ Content-Type: application/json
 }
 ###
 // delete kategori
-DELETE  http://localhost:5000/kategori/458b1d00-0100-42c2-9850-d0acca5dfec0
+DELETE  https://backendpustakacapstone-production.up.railway.app/kategori/458b1d00-0100-42c2-9850-d0acca5dfec0
 
 
 ###
 //create book
-POST http://localhost:5000/book
+POST https://backendpustakacapstone-production.up.railway.app/book
 Content-Type: application/json
 
 {
@@ -121,15 +121,15 @@ Content-Type: application/json
 
 ###
 // get All books
-GET http://localhost:5000/books
+GET https://backendpustakacapstone-production.up.railway.app/books
 
 ###
 // get Single books
-GET http://localhost:5000/book/b629b56c-b971-47c9-ad1e-3f43087eb708
+GET https://backendpustakacapstone-production.up.railway.app/book/b629b56c-b971-47c9-ad1e-3f43087eb708
 
 ###
 //create book
-PATCH  http://localhost:5000/book/704889dc-6300-4ad4-9a36-ec23dcc909a4
+PATCH  https://backendpustakacapstone-production.up.railway.app/book/704889dc-6300-4ad4-9a36-ec23dcc909a4
 Content-Type: application/json
 
 {
@@ -146,11 +146,11 @@ Content-Type: application/json
 
 ###
 // Delete book
-DELETE http://localhost:5000/book/b629b56c-b971-47c9-ad1e-3f43087eb708
+DELETE https://backendpustakacapstone-production.up.railway.app/book/b629b56c-b971-47c9-ad1e-3f43087eb708
 
 ###
 // Create Peminjaman
-POST http://localhost:5000/peminjaman
+POST https://backendpustakacapstone-production.up.railway.app/peminjaman
 Content-Type: application/json
 
 {
@@ -163,15 +163,15 @@ Content-Type: application/json
 
 ###
 // Get ALL Peminjaman
-GET http://localhost:5000/peminjamans
+GET https://backendpustakacapstone-production.up.railway.app/peminjamans
 
 ###
 // Get Single Peminjaman
-GET http://localhost:5000/peminjaman/7978f8c4-f38c-4aca-abc2-12515eba9bf0
+GET https://backendpustakacapstone-production.up.railway.app/peminjaman/7978f8c4-f38c-4aca-abc2-12515eba9bf0
 
 ###
 // Update Peminjaman
-patch http://localhost:5000/peminjaman/2ac27989-6392-4ea8-8187-d87a58e1199a
+patch https://backendpustakacapstone-production.up.railway.app/peminjaman/2ac27989-6392-4ea8-8187-d87a58e1199a
 Content-Type: application/json
 
 {
@@ -184,5 +184,5 @@ Content-Type: application/json
 
 ###
 // Delete Peminjaman
-DELETE  http://localhost:5000/peminjaman/2ac27989-6392-4ea8-8187-d87a58e1199a
+DELETE  https://backendpustakacapstone-production.up.railway.app/peminjaman/2ac27989-6392-4ea8-8187-d87a58e1199a
 
