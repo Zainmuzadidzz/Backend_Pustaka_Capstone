@@ -5,5 +5,6 @@ const router = express.Router();
 router.get('/me', me);
 router.post('/login', Login);
 router.delete('/logout', Logout);
+router.get('/', (req, res) => res.json({msg: "Hello"}));
 
 export default router;
