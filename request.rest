@@ -64,6 +64,18 @@ Content-Type: application/json
         
 }
 ###
+// Register User role user
+POST https://backendpustakacapstone-production.up.railway.app/register
+Content-Type: application/json
+
+{
+    "name": "user1",
+    "email": "user1@gmail.com",
+    "confPassword": "123456",
+    "password": "123456"
+        
+}
+###
 // get Me
 GET https://backendpustakacapstone-production.up.railway.app/me
 
