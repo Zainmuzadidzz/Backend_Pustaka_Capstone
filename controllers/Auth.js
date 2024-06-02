@@ -39,3 +39,8 @@ export const Logout = (req, res) => {
     });
     
 }
+
+
+export const test = (req, res) => {
+    res.json({msg: "Hello"});
+}
