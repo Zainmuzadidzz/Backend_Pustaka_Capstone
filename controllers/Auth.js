@@ -52,7 +52,7 @@ export const Register = async (req, res) => {
       role: "user"
 
     });
-    res.status(201).json(user);
+    res.status(201).json("Register Berhasil");
     } catch (error) {
         res.status(400).json({msg: error.message});    
     }
