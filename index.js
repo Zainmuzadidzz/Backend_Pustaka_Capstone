@@ -45,6 +45,6 @@ app.use(PeminjamanRoute);
 app.use(AuthRoute);
 
 
-app.listen(process.env.APP_PORT, ()=> {
-    console.log('Server up and running...',process.env.APP_PORT);
+app.listen(process.env.DB_PORT, ()=> {
+    console.log('Server up and running...',process.env.DB_PORT);
 });
