@@ -17,6 +17,7 @@ export const Login = async (req, res) => {
     const name = users.name;
     const email = users.email;
     const role = users.role;
+    res.header("Access-Control-Allow-Origin", "*");
     res.status(200).json({uuid, name, email, role});    
           
 }
@@ -30,11 +31,13 @@ export const me = async (req, res) => {
         attributes: ['uuid', 'name', 'email', 'jenisKelamin', 'noTlp', 'alamat', 'role'],
     });
     if(!user) return res.status(404).json({msg: "User Tidak Ditemukan"});
+    res.header("Access-Control-Allow-Origin", "*");
     res.status(200).json(user);
 }
 export const Logout = (req, res) => {
     req.session.destroy((err) => {
         if(err) return res.status(400).json({msg: "Tidak Dapat Logout"});
+        res.header("Access-Control-Allow-Origin", "*");
         res.status(200).json({msg: "Anda Telah Logout"});
     });
     
@@ -52,8 +55,10 @@ export const Register = async (req, res) => {
       role: "user"
 
     });
+    res.header("Access-Control-Allow-Origin", "*");
     res.status(201).json("Register Berhasil");
     } catch (error) {
+        res.header("Access-Control-Allow-Origin", "*");
         res.status(400).json({msg: error.message});    
     }
 }
@@ -61,4 +66,5 @@ export const Register = async (req, res) => {
 
 export const test = (req, res) => {
     res.json({msg: "Hello"});
+    res.header("Access-Control-Allow-Origin", "*");
 }
