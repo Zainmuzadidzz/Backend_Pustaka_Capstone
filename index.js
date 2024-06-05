@@ -19,9 +19,9 @@ const store = new sessionStore({
 });
 
 // aktifkan saat pertama kali di jalankan
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();
 
 
 
@@ -44,8 +44,8 @@ app.use(BookRoute);
 app.use(PeminjamanRoute);
 app.use(AuthRoute);
 
-store.sync();
-const port = process.env.PORT || 3000;
+// store.sync();
+const port = process.env.DB_PORT || 3000;
 app.listen(port, () => {
     console.log('Server up and running',port)
 });
