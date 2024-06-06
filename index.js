@@ -33,10 +33,18 @@ app.use(session({
     cookie: { secure: 'auto' }
 }))
 
-app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:5173'
-}));
+app.use(
+    cors({
+      credentials: true,
+      origin: function (origin, callback) {
+        if (!origin) {
+          callback(null, true);
+        } else {
+          callback(null, true);
+        }
+      },
+    })
+  );
 app.use(express.json());
 app.use(UserRoute);
 app.use(KategoriRoute);
