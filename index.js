@@ -30,12 +30,11 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: store,
-    cookie: { secure: 'auto' }
+    cookie: { secure: false }
 }))
 
 app.use(
     cors({
-      credentials: true,
       origin: function (origin, callback) {
         if (!origin) {
           callback(null, true);
@@ -43,6 +42,7 @@ app.use(
           callback(null, true);
         }
       },
+      credentials: true,  
     })
   );
 app.use(express.json());
