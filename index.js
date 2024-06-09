@@ -31,13 +31,13 @@ app.use(session({
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: false, 
+      secure: true, 
       sameSite: "none",
       httpOnly: true,
       maxAge  : 60 * 60 * 1000 
     }
 }))
-
+app.set('trust proxy', 1);
 app.use(
     cors({
       origin: function (origin, callback) {
