@@ -31,10 +31,7 @@ app.use(session({
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: true, 
-      sameSite: "none",
-      httpOnly: true,
-      maxAge  : 60 * 60 * 1000 
+      secure: false    
     }
 }))
 app.set('trust proxy', 1);
