@@ -28,7 +28,7 @@ Content-Type: application/json
     "name": "user Updated",
     "email": "user@gmail.com",
     "password": "",
-     "confPassword": "",
+    "confPassword": "",
     "jenisKelamin": "Perempuan",
     "noTlp": "08123998712",
     "alamat": "Jl jampra lorongs 2 no 12a",    
@@ -145,7 +145,7 @@ PATCH  https://backendpustakacapstone-production.up.railway.app/book/704889dc-63
 Content-Type: application/json
 
 {
-    "judul": "Buku 3",
+    "judul": "Buku 4",
     "penulis": "Penulis 3",
     "penerbit": "Penerbit 3",
     "cover": "Cover 3",
