@@ -39,7 +39,7 @@ const Books = db.define('books',{
         type: DataTypes.STRING,        
         allowNull: false,
         validate:{
-            notEmpty: true,             
+            notEmpty: false,             
         }
     },
     sinopsis:{
