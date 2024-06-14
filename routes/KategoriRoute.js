@@ -3,7 +3,7 @@ import {getKategoris, getKategoriById, createKategori, updateKategori, deleteKat
 import { verifyUser, adminOnly } from "../middleware/AuthUser.js";
 const router = express.Router();
 
-router.get('/kategoris', verifyUser, adminOnly, getKategoris);
+router.get('/kategoris', verifyUser, getKategoris);
 router.get('/kategori/:id', verifyUser, adminOnly, getKategoriById);
 router.post('/kategori', verifyUser, adminOnly, createKategori);
 router.patch('/kategori/:id', verifyUser, adminOnly, updateKategori);

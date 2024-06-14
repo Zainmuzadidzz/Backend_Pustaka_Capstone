@@ -23,20 +23,30 @@ const store = new sessionStore({
     await db.sync();
 })();
 
-store.sync();
+
 
 app.use(session({
     secret: process.env.SESS_SECRET,
     resave: false,
     saveUninitialized: true,
     store: store,
-    cookie: { secure: 'auto' }
+    cookie: {
+      secure: false    
+    }
 }))
-
-app.use(cors({
-    credentials: true,
-    origin: '*'
-}));
+app.set('trust proxy', 1);
+app.use(
+    cors({
+      origin: function (origin, callback) {
+        if (!origin) {
+          callback(null, true);
+        } else {
+          callback(null, true);
+        }
+      },
+      credentials: true,  
+    })
+  );
 app.use(express.json());
 app.use(UserRoute);
 app.use(KategoriRoute);
@@ -44,6 +54,7 @@ app.use(BookRoute);
 app.use(PeminjamanRoute);
 app.use(AuthRoute);
 
+store.sync();
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log('Server up and running',port)

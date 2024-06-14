@@ -4,7 +4,7 @@ import Kategori from "../models/KategoriModel.js";
 export const getBooks = async(req, res) => {
     try {
         const response = await Books.findAll({
-            attributes: ['uuid', 'judul', 'penulis', 'penerbit', 'cover', 'sinopsis', 'tahun_terbit', 'qty', 'kategoriId'],
+            attributes: ['uuid', 'id', 'judul', 'penulis', 'penerbit', 'cover', 'sinopsis', 'tahun_terbit', 'qty', 'kategoriId'],
             include:[{
                 model: Kategori,
                 attributes: ['name']

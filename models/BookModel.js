@@ -37,11 +37,8 @@ const Books = db.define('books',{
     },
     cover:{
         type: DataTypes.STRING,        
-        allowNull: false,
-        validate:{
-            notEmpty: true,
-            len: [3, 400]     
-        }
+        allowNull: true,
+       
     },
     sinopsis:{
         type: DataTypes.STRING,        
