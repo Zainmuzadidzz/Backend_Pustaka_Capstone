@@ -31,7 +31,7 @@ app.use(session({
     saveUninitialized: true,
     store: store,
     cookie: {
-      secure: false    
+      secure: true    
     }
 }))
 app.set('trust proxy', 1);
