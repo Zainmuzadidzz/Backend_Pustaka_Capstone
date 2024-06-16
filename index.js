@@ -30,7 +30,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: store,
-    cookie: { secure: true, sameSite: "none" },
+    cookie: { secure: 'auto', sameSite: "none" },
 }))
 
 app.use(
