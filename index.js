@@ -24,20 +24,24 @@ const store = new sessionStore({
 })();
 
 
-
+app.set('trust proxy', 1);
 app.use(session({
     secret: process.env.SESS_SECRET,
     resave: false,
     saveUninitialized: true,
     store: store,
-    cookie: {
-      secure: false    
-    }
+    cookie: { secure: true, sameSite: "none" },
 }))
-app.set('trust proxy', 1);
+
 app.use(
     cors({
-      origin:'http://localhost:5173',
+      origin: function (origin, callback) {
+        if (!origin) {
+          callback(null, true);
+        } else {
+          callback(null, true);
+        }
+      },
       credentials: true,  
     })
   );
