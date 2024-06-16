@@ -138,14 +138,11 @@ export const updatePeminjaman = async (req, res) => {
     
         if (!peminjaman) return res.status(404).json({msg: "Peminjaman not found"});
 
-        const {tanggal_pinjam, tanggal_kembali, status, userId, bookId} = req.body;
+        const {tanggal_kembali, status} = req.body;
         await peminjaman.update(
             {
-                tanggal_pinjam: tanggal_pinjam,
                 tanggal_kembali: tanggal_kembali,
                 status: status,
-                userId: userId,
-                bookId: bookId
             }
         );
         res.status(200).json("Peminjaman Updated");
