@@ -163,7 +163,7 @@ export const deletePeminjaman = async (req, res) => {
 
   
         await peminjaman.destroy();
-        res.status(200).json("Peminjaman Deleted");
+        res.status(200).json({msg: "Peminjaman Deleted"});
      } catch (error) {
         res.status(500).json({msg: error.message});
      }
