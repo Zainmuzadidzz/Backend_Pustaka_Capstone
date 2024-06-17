@@ -27,7 +27,7 @@ export const me = async (req, res) => {
         where: {
             uuid: req.session.userId
         },
-        attributes: ['uuid', 'name', 'email', 'jenisKelamin', 'noTlp', 'alamat', 'role'],
+        attributes: ['uuid', 'name', 'email', 'jenisKelamin', 'noTlp', 'alamat', 'role','id'],
     });
     if(!user) return res.status(404).json({msg: "User Tidak Ditemukan"});
     res.status(200).json(user);
