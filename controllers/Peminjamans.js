@@ -145,7 +145,7 @@ export const updatePeminjaman = async (req, res) => {
                 status: status,
             }
         );
-        res.status(200).json("Peminjaman Updated");
+        res.status(200).json({msg: "Peminjaman Updated"});
      } catch (error) {
         res.status(500).json({msg: error.message});
      }
