@@ -77,6 +77,16 @@ Content-Type: application/json
 }
 ###
 // get Me
+POST http://localhost:3000/me
+Content-Type: application/json
+
+{
+    
+  "uuid": "48af0ec5-8b9f-4c32-a6a4-e5aea38cabb6"
+        
+}
+###
+// get Me
 GET http://localhost:3000/me
 
 ###

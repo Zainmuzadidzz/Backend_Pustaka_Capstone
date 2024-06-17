@@ -41,7 +41,7 @@ const Books = db.define('books',{
        
     },
     sinopsis:{
-        type: DataTypes.STRING,        
+        type: DataTypes.TEXT('long'),        
         allowNull: false,
         validate:{
             notEmpty: true,            
