@@ -24,17 +24,15 @@ const store = new sessionStore({
 })();
 
 
-
+app.set('trust proxy', 1);
 app.use(session({
     secret: process.env.SESS_SECRET,
     resave: false,
     saveUninitialized: true,
     store: store,
-    cookie: {
-      secure: false    
-    }
+    cookie: { secure: 'auto', sameSite: "none" },
 }))
-app.set('trust proxy', 1);
+
 app.use(
     cors({
       origin: function (origin, callback) {

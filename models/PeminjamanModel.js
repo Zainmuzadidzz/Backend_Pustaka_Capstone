@@ -23,10 +23,7 @@ const Peminjaman = db.define('peminjaman',{
     },
     tanggal_kembali:{
         type: DataTypes.DATE,        
-        allowNull: false,
-        validate:{
-            notEmpty: true,   
-        }
+        allowNull: true,
     },
     status:{
         type: DataTypes.STRING,        

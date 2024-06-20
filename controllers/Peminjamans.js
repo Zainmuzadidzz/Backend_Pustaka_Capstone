@@ -138,17 +138,14 @@ export const updatePeminjaman = async (req, res) => {
     
         if (!peminjaman) return res.status(404).json({msg: "Peminjaman not found"});
 
-        const {tanggal_pinjam, tanggal_kembali, status, userId, bookId} = req.body;
+        const {tanggal_kembali, status} = req.body;
         await peminjaman.update(
             {
-                tanggal_pinjam: tanggal_pinjam,
                 tanggal_kembali: tanggal_kembali,
                 status: status,
-                userId: userId,
-                bookId: bookId
             }
         );
-        res.status(200).json("Peminjaman Updated");
+        res.status(200).json({msg: "Peminjaman Updated"});
      } catch (error) {
         res.status(500).json({msg: error.message});
      }
@@ -166,7 +163,7 @@ export const deletePeminjaman = async (req, res) => {
 
   
         await peminjaman.destroy();
-        res.status(200).json("Peminjaman Deleted");
+        res.status(200).json({msg: "Peminjaman Deleted"});
      } catch (error) {
         res.status(500).json({msg: error.message});
      }
